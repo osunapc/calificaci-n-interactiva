@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<title>Frontend Mentor | Interactive rating component</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Rating state start -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<section class="rating">
+			<div class="rating-cont_icon">
+				<img src="/images/icon-star.svg" alt="estrella naranja" />
+			</div>
+			<h2 class="descripcion">How did we do?</h2>
+			<p>
+				Please let us know how we did with your support request. All feedback is
+				appreciated to help us improve our offering!
+			</p>
+			<div class="rating-num">
+				<button class="button-num">1</button>
+				<button class="button-num">2</button>
+        <button class="button-num">3</button>
+				<button class="button-num">4</button>
+        <button class="button-num">5</button>
+			</div>
 
-  <!-- Rating state start -->
+			<button class="rating-submit">Submit</button>
+		</section>
 
-  How did we do?
+	 
+    <section>
+      <img src="/images/illustration-thank-you.svg" alt="imagen de un celular">
+      <div class="result">You selected
+		<span class="result">5</span>
+		out of 5</div>
+    <h2>Thank you!</h2>
+    <p>  We appreciate you taking the time to give a rating. If
+		you ever need more support, don’t hesitate to get in touch!</p>
+    </section>
+		
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+		
 
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<footer class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>. 
+    </footer>
+	</body>
 </html>
