@@ -1,37 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
-root {
-	/* Primary */
-
+:root {
 	--Orange: hsl(25, 97%, 53%);
-	/* Neutral */
 	--White: hsl(0, 0%, 100%);
-	--LightGrey: hsl(217, 12%, 63%);
+	--LightGrey: hsl(217, 12%, 24%);
+	--MediuntGrey: hsl(217, 12%, 64%);
 	--DarkBlue: hsl(213, 19%, 18%);
 	--VeryDarkBlue: hsl(216, 12%, 8%);
 }
-
-body {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
 	font-family: "Overpass", sans-serif;
 	font-size: 15px;
 	background: var(--VeryDarkBlue);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    
 }
-.rating {
+
+.rating,
+.thank {
 	width: 332px;
 	height: 358px;
 	background-color: var(--DarkBlue);
-    display: flex;
-    flex-direction: column;
-
+	border-radius: 16px;
+	margin: 30% auto 80px;
+	padding: 25px;
 }
+.rating-cont_icon,
+.button-num {
+	width: 40px;
+	height: 40px;
+	background-color: var(--LightGrey);
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	margin-bottom: 20px;
+	color: var(--MediuntGrey);
+	border: none;
+}
+
+section {
+	h2 {
+		color: var(--White);
+		margin-bottom: 20px;
+		font-weight: 400;
+	}
+	p {
+		color: var(--MediuntGrey);
+		margin-bottom: 25px;
+		letter-spacing: -0.5px;
+		line-height: 1.5;
+	}
+}
+.rating-num {
+	display: flex;
+	justify-content: space-between;
+}
+.button-num:hover {
+	background: var(--Orange);
+	color: var(--White);
+	cursor: pointer;
+}
+.button-num:focus {
+	color: var(--DarkBlue);
+	background-color: var(--White);
+}
+.rating-submit {
+	background-color: var(--Orange);
+	width: 280px;
+	height: 47px;
+	border-radius: 50px;
+	border: none;
+	color: var(--DarkBlue);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.rating-submit:hover {
+	background-color: var(--White);
+	cursor: pointer;
+}
+/*thank*/
+
+.thank {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	img {
+		margin: 25px 0;
+		height: 100px;
+	}
+	.result {
+		background-color: var(--LightGrey);
+		width: 171px;
+		height: 36px;
+		border-radius: 50px;
+		text-align: center;
+		color: var(--Orange);
+		margin-bottom: 25px;
+		padding: 10px 0;
+	}
+}
+
 /*footer*/
 .attribution {
 	font-size: 11px;
@@ -39,4 +114,11 @@ body {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (width > 375px) {
+	.rating,
+	.thank {
+      margin: 20vh auto 80px;
+	}
 }
